@@ -1,0 +1,82 @@
+@import "./base.module.scss";
+
+
+.container {
+    @include container;
+    
+    .back {
+        margin-top: 9rem;
+        display: inline-block;
+        padding: 0.3rem;
+        width: 100px;
+        height: fit-content;
+        background-color: rgb(252, 252, 252);
+        border-radius: 5px;
+        margin-bottom: 40px;
+        color: black;
+        box-shadow: 1px 1px 2px 1px #333;
+        
+    }
+    
+    .detailContainer {
+        @include flex-row;
+        flex-wrap: wrap;
+        font-size: 15px;
+        justify-content: space-between;
+
+        .left {
+            margin-left: -160px;
+            
+        }
+
+        .right {
+            margin-top: 60px;
+            margin-right: 20px;
+            
+        }
+
+        .footer {
+            margin-left: 400px;
+        }
+
+    }
+}
+
+@media (max-width: 450px) {
+    @import "./base.module.scss";
+
+.container {
+    @include container;
+    margin-top: 0;
+
+    .back {
+        margin-top: 11rem
+        
+    }
+
+    .detailContainer {
+        display: block;
+        width: 100%;
+        
+        img {
+            width: 100%;
+        }
+
+        .left {
+            margin-left: 0;
+            
+        }
+
+        .right {
+            margin-top: 0;
+            margin-right: 0;
+            
+        }
+
+        .footer {
+            margin-left: 0;
+        }
+
+    }
+}
+}

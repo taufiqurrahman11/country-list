@@ -1,0 +1,36 @@
+@import './base.module.scss';
+
+.containerAll {
+    @include flex-column
+}
+
+.topbar{
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 100px;
+
+        input {
+            height: 40px;
+            width: 30%;
+            font-size: 1rem;
+        }
+
+        select {
+            height: 40px;
+            width: 20%;
+            font-size: 1rem;
+        }
+
+    }
+}
+
+@media (max-width: 450px) {
+    .topbar {
+        .container {
+            margin-top: 150px;
+        }
+    }
+}

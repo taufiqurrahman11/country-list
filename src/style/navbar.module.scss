@@ -1,0 +1,52 @@
+@import "./base.module.scss";
+
+.container {
+    @include flex-row;
+    padding: 2rem 0;
+    @include container;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  
+    .logo {
+      font-size: 25px;
+      font-weight: 700;
+    }
+  
+    .darkmode {
+      button {
+        @include flex-row;
+        column-gap: 1rem;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+  
+        cursor: pointer;
+        outline: inherit;
+        align-items: center;
+      }
+  
+      .title {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  
+  .darkNav {
+    background: rgba(43, 55, 67, 1);
+    color: white;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar {
+      @include flex-column;
+      text-align: center;
+      row-gap: 1rem;
+    }
+  }
